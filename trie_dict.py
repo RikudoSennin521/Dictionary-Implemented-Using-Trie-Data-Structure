@@ -70,7 +70,7 @@ class Trie:
 
 
 def main():
-    file = open('trie_input.txt', 'r')
+    file = open('database.txt', 'r')
     text = file.read()
 
     dictarray = [x.split(':') for x in text.splitlines()]
@@ -107,8 +107,8 @@ def main():
             print('Enter its definition:')
             defn = input()
             t.insert(word,defn)
-            afile = open('trie_input.txt','a')
-            if (os.path.getsize('trie_input.txt') > 0):
+            afile = open('database.txt','a')
+            if (os.path.getsize('database.txt') > 0):
                 afile.write('\n' + word + ':' + defn)
             else:
                 afile.write(word + ':' + defn)
